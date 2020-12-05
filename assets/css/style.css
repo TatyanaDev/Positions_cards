@@ -1,5 +1,7 @@
-body {
+* {
   box-sizing: border-box;
+}
+body {
   margin: 5px;
   font-family: sans-serif;
   background-color: #f2edf3;
@@ -8,12 +10,14 @@ body {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  min-width: 20%;
-  min-height: 40px;
-  padding: 50px 70px;
+  min-width: 300px;
+  max-width: 420px;
+  width: 100%;
+  padding: 40px 40px;
   color: white;
   border-radius: 10px;
   font-size: 1.3em;
+  margin-left: 40px;
 }
 .card::after,
 .card::before {
@@ -21,53 +25,52 @@ body {
   position: absolute;
   opacity: 20%;
   display: block;
-  height: 250px;
-  width: 250px;
+  height: 220px;
+  width: 220px;
   border-radius: 50%;
   background-color: white;
 }
 .card::after {
-  top: -20%;
-  right: -30%;
+  top: -10%;
+  right: -25%;
 }
 .card::before {
-  right: -10%;
+  right: -8%;
   bottom: -50%;
 }
-.relative {
+.relative-margin {
   position: relative;
+  margin-bottom: 30px;
 }
 .card-icon {
   position: absolute;
   top: 0;
   right: 0;
 }
-.card1 {
+.card:nth-child(3n + 1) {
   background: linear-gradient(
     90deg,
     rgba(255, 189, 154, 1) 0%,
     rgba(255, 135, 152, 1) 100%
   );
 }
-.card2 {
-  margin: 0px 40px;
+.card:nth-child(3n + 2) {
   background: linear-gradient(
     90deg,
     rgba(139, 200, 245, 1) 0%,
     rgba(26, 145, 224, 1) 100%
   );
 }
-.card3 {
+.card:nth-child(3n + 3) {
   background: linear-gradient(
     90deg,
     rgba(125, 217, 210, 1) 0%,
     rgba(34, 216, 194, 1) 100%
   );
 }
-.font-size {
+.font-size-margin {
   font-size: 1.5em;
-  padding-top: 1em;
-  padding-bottom: 2em;
+  margin-bottom: 60px;
 }
 p {
   font-weight: bold;
