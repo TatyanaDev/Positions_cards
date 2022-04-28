@@ -1,77 +1,86 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  margin: 5px;
-  font-family: sans-serif;
   background-color: #f2edf3;
+  font-family: sans-serif;
 }
+
+.cards-wrapper {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
 .card {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  min-width: 300px;
-  max-width: 420px;
-  width: 100%;
-  padding: 40px 40px;
-  color: white;
   border-radius: 10px;
-  font-size: 1.3em;
-  margin-left: 40px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 60px;
+  width: 540px;
 }
+
+.card:not(:last-child) {
+  margin-right: 60px;
+}
+
 .card::after,
 .card::before {
-  content: "";
+  background-color: #ffffff;
   position: absolute;
-  opacity: 20%;
-  display: block;
-  height: 220px;
-  width: 220px;
   border-radius: 50%;
-  background-color: white;
+  display: block;
+  height: 300px;
+  opacity: 20%;
+  width: 300px;
+  content: "";
 }
+
 .card::after {
-  top: -10%;
   right: -25%;
+  top: -10%;
 }
+
 .card::before {
-  right: -8%;
-  bottom: -50%;
+  bottom: -40%;
+  right: -2%;
 }
-.relative-margin {
-  position: relative;
+
+.card:nth-child(3n + 1) {
+  background: linear-gradient(90deg, rgba(255, 189, 154, 1) 0%, rgba(255, 135, 152, 1) 100%);
+}
+
+.card:nth-child(3n + 2) {
+  background: linear-gradient(90deg, rgba(139, 200, 245, 1) 0%, rgba(26, 145, 224, 1) 100%);
+}
+
+.card:nth-child(3n + 3) {
+  background: linear-gradient(90deg, rgba(125, 217, 210, 1) 0%, rgba(34, 216, 194, 1) 100%);
+}
+
+.content-wrapper {
   margin-bottom: 30px;
+  position: relative;
+  font-size: 1.5em;
 }
+
 .card-icon {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
 }
-.card:nth-child(3n + 1) {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 189, 154, 1) 0%,
-    rgba(255, 135, 152, 1) 100%
-  );
-}
-.card:nth-child(3n + 2) {
-  background: linear-gradient(
-    90deg,
-    rgba(139, 200, 245, 1) 0%,
-    rgba(26, 145, 224, 1) 100%
-  );
-}
-.card:nth-child(3n + 3) {
-  background: linear-gradient(
-    90deg,
-    rgba(125, 217, 210, 1) 0%,
-    rgba(34, 216, 194, 1) 100%
-  );
-}
-.font-size-margin {
-  font-size: 1.5em;
-  margin-bottom: 60px;
-}
-p {
+
+.content {
+  margin-bottom: 85px;
   font-weight: bold;
+  font-size: 2.5em;
+}
+
+.statistics {
+  font-weight: bold;
+  font-size: 1.2em;
 }
